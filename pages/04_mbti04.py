@@ -42,15 +42,22 @@ h1.neon {
 }
 
 /* 카드 스타일 */
+# 카드 스타일 수정
+st.markdown("""
+<style>
 .card {
-    background: linear-gradient(145deg, rgba(255,255,255,0.1), rgba(255,255,255,0.2));
-    backdrop-filter: blur(10px);
+    background: rgba(0,0,0,0.5); /* 검은색 반투명 배경으로 글씨 대비 UP */
+    backdrop-filter: blur(8px);
     border-radius: 25px;
     padding: 20px;
     margin: 15px;
     text-align:center;
     box-shadow: 0 0 40px rgba(255,20,147,0.6);
     transition: transform 0.3s, box-shadow 0.3s;
+    color: white; /* 글씨 흰색 */
+}
+.card h2, .card p {
+    text-shadow: 1px 1px 5px black; /* 글씨 주변 그림자 */
 }
 .card:hover {
     transform: scale(1.05) rotate(-1deg);
@@ -59,10 +66,11 @@ h1.neon {
 .card img {
     border-radius: 20px;
     width: 100%;
-    box-shadow: 0 0 20px rgba(0,0,0,0.3);
+    box-shadow: 0 0 25px rgba(0,0,0,0.5);
 }
 </style>
 """, unsafe_allow_html=True)
+
 
 # -----------------------------
 # 헤더
