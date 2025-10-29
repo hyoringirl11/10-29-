@@ -14,4 +14,4 @@ if st.button('환영인사'):
 st.success('성공!')
 st.warning('경고')
 st.error('오류')
-st.info(
+
